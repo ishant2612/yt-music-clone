@@ -14,8 +14,39 @@ import { useNavigate } from "react-router-dom";
 function Header({ isSidebarOpen, setIsSidebarOpen }) {
   const [scrolling, setScrolling] = useState(false);
   const [isClicked, setIsClicked] = useState(true);
+  const [searchText,setSearchText] = useState("");
   const { user, Logout } = UserAuth();
   // const navi = useNavigate();
+
+
+  const handleSearch = (event) => {
+    if (event.key === 'Enter') {
+      // Call your function here
+      handleEnterKeyPress();
+    }
+  };
+
+  const handleEnterKeyPress = async () => {
+    try {
+      // const searchQuery = "salman khan"; // Set your search query here
+      const apiURL = `http://localhost:3001/search`;
+  
+      const response = await fetch(apiURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ q: searchText }),
+      });
+  
+      const result = await response.json();
+    } catch (error) {
+      console.error(error);
+    }
+    
+  };
+
+
   const handleSignOut = async () => {
     try {
       await Logout;
@@ -79,6 +110,9 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
           <input
             type="search"
             placeholder="Search songs,album,artists,podcasts"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={handleSearch}
           />
         </div>
         <div className="cast">

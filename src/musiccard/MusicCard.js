@@ -1,14 +1,14 @@
 import React from "react";
 import "./common.css";
-const MusicCard = ({ title, artist, imageUrl, index }) => {
+const MusicCard = ({ author,thumbnail,title,videoId }) => {
   return (
-    <div className="music-card" index={index}>
+    <div className="music-card" index={videoId}>
       <div className="music-img">
-        <img src={imageUrl} alt={title} />
+        <img src={thumbnail} alt={title} />
       </div>
       <div className="music-info">
         <h3>{title}</h3>
-        <p>{artist}</p>
+        <p>{author}</p>
       </div>
     </div>
   );

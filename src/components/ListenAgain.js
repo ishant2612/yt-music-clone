@@ -7,27 +7,22 @@ import MusicCard from "../musiccard/MusicCard";
 import { UserAuth } from "../context/AuthContext";
 function ListenAgain() {
   const { user } = UserAuth();
-  const musicList = [
-    { title: "Song 1", artist: "Artist 1", imageUrl: "url1" },
-    { title: "Song 2", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 3", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 4", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 5", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 6", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 7", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 8", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 9", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 10", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 11", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 12", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 13", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 14", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 15", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 16", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 17", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 18", artist: "Artist 2", imageUrl: "url2" },
-    { title: "Song 19", artist: "Artist 2", imageUrl: "url2" },
-  ];
+  const [musicList, setMusicList] = useState([]);
+
+  useEffect(() => {
+    const fetchMusicList = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/recommend"); // Assuming your API is served at "/recommend" endpoint
+        const data = await response.json();
+        console.log(data);
+        setMusicList(data.result);
+      } catch (error) {
+        console.error("Error fetching music list:", error);
+      }
+    };
+
+    fetchMusicList();
+  }, []);
 
   const dynamicRef = useRef(null);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 5 });
