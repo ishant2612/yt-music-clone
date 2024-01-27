@@ -1,0 +1,228 @@
+.main {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  justify-content: space-between;
+  height: 9vh;
+  width: 100%;
+  padding: 0 1.3vw;
+  background-color: transparent;
+  z-index: 4;
+  transition: color 250ms;
+
+  /* border: 1px solid rgba(249, 249, 249, 0.4); */
+  /* border-style: none none solid none; */
+}
+
+.logo-icon {
+  display: flex;
+  width: auto;
+  z-index: 1;
+  width: 10vw;
+  overflow: visible;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  background-color: #92a0a099;
+}
+
+.icon button:active {
+  background-color: #1e2121;
+}
+
+.menu {
+  color: rgba(255, 255, 255, 0.649);
+  /* font-size: 40vh; */
+  opacity: 0.9;
+  cursor: pointer;
+
+  /* font-weight: 100; */
+}
+
+.logo {
+  /* background-color: red; */
+  height: 4vh;
+
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  padding: 0 0 0 0.6vw;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.searchetc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex: 1; */
+  padding: 0 9vw 0 2vw;
+  /* transition: width 0.3s ease-in-out; */
+  /* background-color: aqua; */
+}
+
+.searchmenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e2121;
+  width: 35%;
+  height: 5.3vh;
+  border-radius: 7px;
+  padding: 0 1vw;
+  border: 0.02vh solid rgba(249, 249, 249, 0.2);
+}
+
+.searchmenu input {
+  width: 90%;
+  height: 80%;
+  margin-top: 0.2vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2.3vh;
+  color: white;
+  caret-color: white;
+}
+
+.searchmenu input::placeholder {
+  font-size: 2.2vh;
+  font-weight: 500;
+  text-align: start;
+  /* padding-left: 0.5vw; */
+  letter-spacing: 0.001vw;
+  color: rgba(249, 249, 249, 0.5);
+}
+
+.search {
+  color: rgba(249, 249, 249, 0.4);
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.cast img {
+  height: 3.7vh;
+  width: 3.7vh;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cast {
+  /* background-color: red; */
+  width: 4.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.casti {
+  cursor: pointer;
+  color: white;
+}
+
+.profilebtn {
+  border: none;
+  background-color: transparent;
+}
+.dropdown {
+  height: 65vh;
+  width: 17vw;
+  position: absolute;
+  background-color: #282828;
+  right: 11vw;
+  top: 6.1vh;
+  border-radius: 10px;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: row;
+  padding: 1vh 0;
+  color: white;
+}
+
+.username {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-style: none none solid none;
+  padding: 0 1vw;
+}
+
+.username img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.username p {
+  margin-left: 1vw;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.channelcon {
+  height: 30%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-style: none none solid none;
+}
+
+.yourchan,
+.yt,
+.logout {
+  width: 100%;
+  height: 33.3%;
+  /* background-color: blue; */
+}
+
+.yourchan button,
+.yt button,
+.logout button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.yourchan button:hover,
+.yt button:hover,
+.logout button:hover {
+  background-color: rgba(249, 249, 249, 0.3);
+}
+
+.btnchan {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 2vh;
+}
+
+.btnchan p {
+  margin-left: 1vw;
+  font-weight: 300;
+}

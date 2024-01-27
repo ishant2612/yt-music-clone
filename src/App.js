@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import Header from "./components/Header";
+// import Sidebar from "./components/Sidebar";
+// import Home from "./components/Home";
+// import "./App.css";
+// import YTMusicComponent from "./musiccard/YTMusicComponent";
+// import GuestHome from "./GuestComp/GuestHome";
+// import { AuthContextProvider, UserAuth } from "./context/AuthContext";
+// // import { UserAuth } from "./context/AuthContext";
+// function App() {
+//   const { user } = UserAuth();
+//   return (
+//     <div>
+//       <AuthContextProvider>
+//         {user?.displayName ? <Home /> : <GuestHome />}
+
+//         {/* <Home /> */}
+//         {/* <Header /> */}
+//         {/* <Sidebar /> */}
+//         {/* <YTMusicComponent /> */}
+//       </AuthContextProvider>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+import "./App.css";
+import YTMusicComponent from "./musiccard/YTMusicComponent";
+import GuestHome from "./GuestComp/GuestHome";
+import { AuthContextProvider, UserAuth } from "./context/AuthContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AuthContextProvider>
+      <AppContent />
+    </AuthContextProvider>
+  );
+}
+
+function AppContent() {
+  const { user } = UserAuth();
+
+  return (
+    <div>
+      {user?.displayName ? <Home /> : <GuestHome />}
+      {/* Other components */}
     </div>
   );
 }

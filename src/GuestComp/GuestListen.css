@@ -1,0 +1,114 @@
+.listenagain {
+  width: 100%;
+  /* background-color: green; */
+  height: 60vh;
+  padding: 6vh 4vw 0 9vw;
+}
+
+.intro {
+  display: flex;
+}
+
+.profile {
+  height: 10vh;
+  width: 10vh;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.la-con {
+  height: 13vh;
+  padding: 0 1vw;
+  /* background-color: blue; */
+}
+
+.la-con p {
+  text-transform: uppercase;
+  font-size: 2.5vh;
+  /* padding: 0 1vw; */
+  color: rgba(249, 249, 249, 0.6);
+
+  margin-bottom: 1.2vh;
+}
+
+.la-con a {
+  text-decoration: none;
+  color: white;
+  font-size: 2vw;
+  font-weight: 700;
+
+  /* margin-top: 9vh; */
+}
+
+.la-con a:hover {
+  text-decoration: underline;
+}
+
+.music-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.cons {
+  /* background-color: red; */
+  width: 230px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.cons button {
+  padding: 10px 17px;
+  color: white;
+  border-radius: 30px;
+  border: 1px solid rgba(249, 249, 249, 0.3);
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cons button:hover {
+  background-color: rgba(249, 249, 249, 0.3);
+  border-color: rgba(249, 249, 249, 0.1);
+}
+.cons button:disabled {
+  border-color: rgba(249, 249, 249, 0.1);
+}
+.sidebtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0 8px 0 30px;
+  /* background-color: aqua; */
+}
+.sidebtn button {
+  border-radius: 50%;
+  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* src/components/HorizontalScroll.css */
+.dynamic {
+  /* background-color: red; */
+  width: 100%;
+  height: calc(100% - 17vh);
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  /* transition: all 250ms ease-in-out; Enable horizontal scrolling */
+}
+
+.card-container {
+  transition: transform 0.5s ease-in-out;
+}

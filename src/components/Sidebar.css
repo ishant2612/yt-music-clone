@@ -1,0 +1,144 @@
+.wrapper {
+  height: 91vh;
+  position: fixed;
+  left: 0;
+
+  bottom: 0;
+  width: 4.7vw;
+  /* display: none; */
+  background-color: transparent;
+  /* border: 1px solid rgba(249, 249, 249, 0.4); */
+  /* border-style: none solid none none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 0.6vw;
+  z-index: -1;
+  transition: color 250ms;
+  /* transition: width 0.3s ease-in-out; */
+  /* overflow: hidden; */
+  /* text-align: start; */
+}
+.addbtn {
+  display: none;
+}
+
+.wrapper.open {
+  width: 16vw;
+  background-color: transparent;
+  border: 1px solid #393a3c72;
+  border-style: none solid none none;
+  /* display: flex; */
+}
+
+.wrapper.open .addbtn {
+  display: inline;
+  margin-top: 3vh;
+  width: 90%;
+  /* background-color: red; */
+  height: 5vh;
+  border-radius: 25px;
+  background-color: #393a3c72;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.addbtn button:hover {
+  background-color: #676a6d72;
+}
+
+.addbtn button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1vw;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.plus {
+  margin-right: 0.41vw;
+  font-size: 4vh;
+  font-weight: 100;
+}
+
+.home,
+.explore,
+.lib,
+.upgrade {
+  /* background-color: #1a1b1c; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 9vh;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.home {
+  background-color: #393a3c72;
+}
+
+.wrapper.open .home,
+.wrapper.open .explore,
+.wrapper.open .lib,
+.wrapper.open .upgrade {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding: 0 1vw;
+  border-radius: 0;
+  height: 7.4vh;
+}
+
+.wrapper.open .home p,
+.wrapper.open .explore p,
+.wrapper.open .lib p,
+.wrapper.open .upgrade p {
+  margin-left: 2vw;
+  font-size: 2vh;
+  text-align: center;
+  color: white;
+  /* letter-spacing: -0.9px; */
+  /* font-size: 1.4vh; */
+  font-weight: 300;
+  margin-top: 0.6vh;
+}
+
+.wrapper .home p,
+.wrapper .explore p,
+.wrapper .lib p,
+.wrapper .upgrade p {
+  /* margin-left: 2vw; */
+  /* font-size: 2vh; */
+  /* text-align: center; */
+  color: white;
+  /* letter-spacing: -0.9px; */
+  font-size: 1.4vh;
+  font-weight: 300;
+  margin-top: 0.6vh;
+}
+
+.wrapper.open .upgrade {
+  border: 2px solid rgba(249, 249, 249, 0.2);
+  border-style: none none solid none;
+  /* height: 7.4vh; */
+  /* padding-bottom: 2vh; */
+}
+
+.wrapper.open .home:hover,
+.wrapper.open .explore:hover,
+.wrapper.open .lib:hover,
+.wrapper.open .upgrade:hover {
+  background-color: #676a6d72;
+}

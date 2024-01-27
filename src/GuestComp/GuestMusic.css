@@ -1,0 +1,44 @@
+.container {
+  /* position: relative; */
+  height: calc(100vh - 9vh);
+  width: calc(100vw - 4.7vw);
+  background-color: transparent;
+  margin-left: 4.7vw;
+  /* margin-top: 4vh; */
+  position: absolute;
+  /* background-color: red; */
+  z-index: 1;
+  /* overflow: hidden; */
+}
+
+.genre {
+  /* background-color: red; */
+  margin-top: 16vh;
+  margin-left: 9vw;
+  width: 56vw;
+  display: flex;
+  /* gap: 1vw; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.genre button {
+  background-color: rgba(150, 150, 150, 0.142);
+  border: none;
+  color: white;
+  padding: 1.4vh 0.8vw;
+  border-radius: 10px;
+  /* height: 4vh; */
+  font-size: 1.8vh;
+  cursor: pointer;
+}
+
+.genre button:hover {
+  background-color: rgba(249, 249, 249, 0.3);
+}
+
+.filling {
+  height: 6vh;
+  width: 6vw;
+  background-color: red;
+}
